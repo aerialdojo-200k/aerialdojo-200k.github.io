@@ -541,3 +541,15 @@ footer { color: #797973; border-color: var(--line); }
 .dialog-caption h2 { color: #47515a; }
 .dialog-caption p { color: #75766f; }
 
+
+/* Demo video, placed directly below the Overview section. */
+.demo-figure video {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #0a1931;
+  border: 1px solid var(--figure-border);
+  border-radius: 10px;
+  box-shadow: 0 4px 16px #22324b12;
+}
+.demo-figure figcaption { color: var(--muted); }
