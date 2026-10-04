@@ -2,15 +2,15 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AerialDojo-200K | Open-World Aerial Object-Goal Search</title>
 <meta name="description" content="AerialDojo-200K: A Large-Scale Benchmark Suite for Open-World Aerial Object-Goal Search.">
-<meta name="robots" content="noindex, nofollow, noarchive"><meta name="referrer" content="no-referrer"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self' data:; font-src 'self'; media-src 'self'; connect-src 'none'; script-src 'sha256-31NR81DU8V2LUZoQDAnKCPIsNb4W82p8iRpF+9bgR2A=' 'sha256-Jc00DZnjah6ESwYAGFnbubAYRgIjxTpLHSocblO2L7M='; object-src 'none'; base-uri 'none'; form-action 'none'"><meta name="theme-color" content="#0a1931"><link rel="stylesheet" href="fonts-26bbacfc940c.css"><link rel="stylesheet" href="styles-9fd1b35fe714.css">
-<script src="resource-links-df5351f350d4.js" integrity="sha256-31NR81DU8V2LUZoQDAnKCPIsNb4W82p8iRpF+9bgR2A=" crossorigin="anonymous" defer></script><script src="script-25cd340d99e3.js" integrity="sha256-Jc00DZnjah6ESwYAGFnbubAYRgIjxTpLHSocblO2L7M=" crossorigin="anonymous" defer></script><link rel="stylesheet" href="demo-0f2e4d5c08e6.css"></head><body>
+<meta name="robots" content="noindex, nofollow, noarchive"><meta name="referrer" content="no-referrer"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self' data:; font-src 'self' data:; media-src 'self' blob:; connect-src 'none'; script-src 'sha256-31NR81DU8V2LUZoQDAnKCPIsNb4W82p8iRpF+9bgR2A=' 'sha256-Jc00DZnjah6ESwYAGFnbubAYRgIjxTpLHSocblO2L7M=' 'sha256-H6JfQs4Pay2x0qOS/4tlBLvkAuqPFRxlujOoI5WHxW4=' 'strict-dynamic'; object-src 'none'; base-uri 'none'; form-action 'none'"><meta name="theme-color" content="#0a1931"><link rel="stylesheet" href="fonts-proxy-dd92962e27ed.css"><link rel="stylesheet" href="styles-9fd1b35fe714.css">
+<link rel="stylesheet" href="demo-0f2e4d5c08e6.css"></head><body>
 <a class="skip-link" href="#demo">Skip to content</a>
-<header class="hero" id="top"><nav class="section-nav" aria-label="Sections"><div class="nav-links"><a href="#overview"><i class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></i><span>OVERVIEW</span></a><a href="#sop"><i class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h12v17H4V4h4m0-2h8v5H8zM8 12h8M8 16h5"/></svg></i><span>SOP</span></a><a href="#data-statistics"><i class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 4 16 4 16 0V5M4 12c0 4 16 4 16 0"/></svg></i><span>DATASET</span></a><a href="#benchmark"><i class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 6-6 6 6 6m8-12 6 6-6 6M14 3l-4 18"/></svg></i><span>BENCHMARK</span></a><a href="#leaderboard"><i class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V4m0 16h17M8 15v-4m5 4V7m5 8V2"/></svg></i><span>LEADERBOARD</span></a></div></nav>
+<header class="hero" id="top"><nav class="section-nav" aria-label="Sections"><div class="nav-links"><a href="#demo"><i class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m10 9 5 3-5 3Z"/></svg></i><span>DEMO</span></a><a href="#overview"><i class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></i><span>OVERVIEW</span></a><a href="#sop"><i class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h12v17H4V4h4m0-2h8v5H8zM8 12h8M8 16h5"/></svg></i><span>SOP</span></a><a href="#data-statistics"><i class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 4 16 4 16 0V5M4 12c0 4 16 4 16 0"/></svg></i><span>DATASET</span></a><a href="#benchmark"><i class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 6-6 6 6 6m8-12 6 6-6 6M14 3l-4 18"/></svg></i><span>BENCHMARK</span></a><a href="#leaderboard"><i class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V4m0 16h17M8 15v-4m5 4V7m5 8V2"/></svg></i><span>LEADERBOARD</span></a></div></nav>
 <div class="hero-inner"><h1><span class="brand">AerialDojo-200K:</span> <span class="paper-title">A Large-Scale Benchmark Suite for Open-World Aerial Object-Goal Search</span></h1>
 <div class="resource-buttons"><a class="resource paper" role="link" tabindex="0" aria-disabled="true" data-resource="anonymous-unavailable" title="Resource withheld for anonymous review"><span class="resource-symbol" aria-hidden="true">arXiv</span>Paper</a><a class="resource simulator" role="link" tabindex="0" aria-disabled="true" data-resource="anonymous-unavailable" title="Resource withheld for anonymous review"><span class="resource-symbol" aria-hidden="true">HF</span>AerialENVS</a><a class="resource tasks" role="link" tabindex="0" aria-disabled="true" data-resource="anonymous-unavailable" title="Resource withheld for anonymous review"><span class="resource-symbol" aria-hidden="true">HF</span>SemanticOGS</a><a class="resource tasks" role="link" tabindex="0" aria-disabled="true" data-resource="anonymous-unavailable" title="Resource withheld for anonymous review"><span class="resource-symbol" aria-hidden="true">HF</span>ImageOGS</a><a class="resource dataset" role="link" tabindex="0" aria-disabled="true" data-resource="anonymous-unavailable" title="Resource withheld for anonymous review"><span class="resource-symbol" aria-hidden="true">HF</span>TrajectoryDATA</a><a class="resource benchmark" role="link" tabindex="0" aria-disabled="true" data-resource="anonymous-unavailable" title="Resource withheld for anonymous review"><span class="resource-symbol" aria-hidden="true">GH</span>Benchmark</a><a class="resource leaderboard" href="#leaderboard"><span class="resource-symbol" aria-hidden="true">GH</span>Leaderboard</a></div><p id="resource-status" role="status" hidden></p>
 <p class="paper-authors"><span>Anonymous Authors</span></p></div></header>
 <main>
-<section class="section" id="demo" aria-labelledby="demo-title"><div class="section-band"><h2 id="demo-title">Demo</h2></div><figure class="paper-figure demo-figure"><video controls playsinline preload="metadata" poster="assets/demo-poster-908a1b4d2ef6.jpg" width="1920" height="1080" aria-label="AerialDojo-200K: 60-second aerial scene demonstration"><source src="assets/demo-69814c755e90.mp4" type="video/mp4">Your browser does not support HTML video. <a href="assets/demo-69814c755e90.mp4">Download the Demo</a>.</video></figure></section>
+<section class="section" id="demo" aria-labelledby="demo-title"><div class="section-band"><h2 id="demo-title">Demo</h2></div><figure class="paper-figure demo-figure"><video controls playsinline preload="none" poster="assets/demo-poster-908a1b4d2ef6.jpg" width="1920" height="1080" aria-label="AerialDojo-200K: 60-second aerial scene demonstration"><source src="assets/demo-69814c755e90.mp4" type="video/mp4">Your browser does not support HTML video. <a href="assets/demo-69814c755e90.mp4">Download the Demo</a>.</video></figure></section>
 <section class="section" id="overview"><div class="section-band"><h2>Overview</h2></div><figure class="paper-figure overview-figure"><a href="assets/fig1-d4846ad57ccb.pdf" target="_blank" rel="noopener" aria-label="Open Overview of AerialDojo-200K"><img src="assets/fig1.webp" width="4096" height="2747" alt="Overview of AerialDojo-200K" loading="lazy" decoding="async"></a></figure><div class="abstract"><p>Open-world aerial object-goal search is a foundational yet challenging task, requiring aerial agents to autonomously explore large-scale, unstructured three-dimensional environments and reach target objects specified by semantic descriptions or reference images, rather than following route-specific instructions. However, research in this task remains at a nascent stage and relies on small, environment-specific benchmarks with heterogeneous action spaces and data formats. These limitations hinder large-scale training and cross-benchmark evaluation, constraining the scalability and generalizability of aerial agents. To address this problem, we propose <strong>AerialDojo-200K</strong>:</p>
 <ul class="overview-points">
 <li><h3 class="contribution-title"><span aria-hidden="true">01</span><strong>Large-Scale</strong></h3><p>AerialDojo-200K comprises <strong>42 scenes</strong> across four scene families and 21 scene types, and <strong>205,732 task instances</strong> spanning SemanticOGS and ImageOGS under Base, Standard, and Long-Horizon settings. AerialDojo-200K offers <strong>3× as many scenes and 18.7× as many task instances</strong> as the largest prior benchmark for aerial object-goal search.</p></li>
@@ -35,4 +35,211 @@
 </code></pre><p id="copy-status" role="status" aria-live="polite"></p></div></section>
 </main><footer><span>AerialDojo-200K</span><a href="#top">Back to top ↑</a></footer>
 <dialog id="scene-dialog" aria-labelledby="scene-dialog-title"><button class="dialog-close" aria-label="Close scene preview">×</button><img id="dialog-image" alt=""><div class="dialog-caption"><h2 id="scene-dialog-title"></h2><p id="scene-dialog-detail"></p></div></dialog>
-</body></html>
+<script>window.AERIALDOJO_LINKS = {leaderboard: '#leaderboard'};
+</script><script>const SCENES = [{"id": "D_Earthquake_0", "family": "Disaster", "name": "Earthquake", "variant": 0, "src": "assets/D_Earthquake_0.webp"}, {"id": "D_Earthquake_1", "family": "Disaster", "name": "Earthquake", "variant": 1, "src": "assets/D_Earthquake_1.webp"}, {"id": "D_Explosion_0", "family": "Disaster", "name": "Explosion", "variant": 0, "src": "assets/D_Explosion_0.webp"}, {"id": "D_Explosion_1", "family": "Disaster", "name": "Explosion", "variant": 1, "src": "assets/D_Explosion_1.webp"}, {"id": "D_Flood_0", "family": "Disaster", "name": "Flood", "variant": 0, "src": "assets/D_Flood_0.webp"}, {"id": "D_Flood_1", "family": "Disaster", "name": "Flood", "variant": 1, "src": "assets/D_Flood_1.webp"}, {"id": "I_Bridge_0", "family": "Infrastructure", "name": "Bridge", "variant": 0, "src": "assets/I_Bridge_0.webp"}, {"id": "I_Bridge_1", "family": "Infrastructure", "name": "Bridge", "variant": 1, "src": "assets/I_Bridge_1.webp"}, {"id": "I_Harbor_0", "family": "Infrastructure", "name": "Harbor", "variant": 0, "src": "assets/I_Harbor_0.webp"}, {"id": "I_Harbor_1", "family": "Infrastructure", "name": "Harbor", "variant": 1, "src": "assets/I_Harbor_1.webp"}, {"id": "I_RailCorridor_0", "family": "Infrastructure", "name": "Rail corridor", "variant": 0, "src": "assets/I_RailCorridor_0.webp"}, {"id": "I_RailCorridor_1", "family": "Infrastructure", "name": "Rail corridor", "variant": 1, "src": "assets/I_RailCorridor_1.webp"}, {"id": "N_Coast_0", "family": "Natural", "name": "Coast", "variant": 0, "src": "assets/N_Coast_0.webp"}, {"id": "N_Coast_1", "family": "Natural", "name": "Coast", "variant": 1, "src": "assets/N_Coast_1.webp"}, {"id": "N_Desert_0", "family": "Natural", "name": "Desert", "variant": 0, "src": "assets/N_Desert_0.webp"}, {"id": "N_Desert_1", "family": "Natural", "name": "Desert", "variant": 1, "src": "assets/N_Desert_1.webp"}, {"id": "N_Forest_0", "family": "Natural", "name": "Forest", "variant": 0, "src": "assets/N_Forest_0.webp"}, {"id": "N_Forest_1", "family": "Natural", "name": "Forest", "variant": 1, "src": "assets/N_Forest_1.webp"}, {"id": "N_Island_0", "family": "Natural", "name": "Island", "variant": 0, "src": "assets/N_Island_0.webp"}, {"id": "N_Island_1", "family": "Natural", "name": "Island", "variant": 1, "src": "assets/N_Island_1.webp"}, {"id": "N_Mountain_0", "family": "Natural", "name": "Mountain", "variant": 0, "src": "assets/N_Mountain_0.webp"}, {"id": "N_Mountain_1", "family": "Natural", "name": "Mountain", "variant": 1, "src": "assets/N_Mountain_1.webp"}, {"id": "N_Snowfield_0", "family": "Natural", "name": "Snowfield", "variant": 0, "src": "assets/N_Snowfield_0.webp"}, {"id": "N_Snowfield_1", "family": "Natural", "name": "Snowfield", "variant": 1, "src": "assets/N_Snowfield_1.webp"}, {"id": "U_Alley_0", "family": "Urban", "name": "Alley", "variant": 0, "src": "assets/U_Alley_0.webp"}, {"id": "U_Alley_1", "family": "Urban", "name": "Alley", "variant": 1, "src": "assets/U_Alley_1.webp"}, {"id": "U_Community_0", "family": "Urban", "name": "Community", "variant": 0, "src": "assets/U_Community_0.webp"}, {"id": "U_Community_1", "family": "Urban", "name": "Community", "variant": 1, "src": "assets/U_Community_1.webp"}, {"id": "U_ConstructionSite_0", "family": "Urban", "name": "Construction site", "variant": 0, "src": "assets/U_ConstructionSite_0.webp"}, {"id": "U_ConstructionSite_1", "family": "Urban", "name": "Construction site", "variant": 1, "src": "assets/U_ConstructionSite_1.webp"}, {"id": "U_Factory_0", "family": "Urban", "name": "Factory", "variant": 0, "src": "assets/U_Factory_0.webp"}, {"id": "U_Factory_1", "family": "Urban", "name": "Factory", "variant": 1, "src": "assets/U_Factory_1.webp"}, {"id": "U_Mall_0", "family": "Urban", "name": "Mall", "variant": 0, "src": "assets/U_Mall_0.webp"}, {"id": "U_Mall_1", "family": "Urban", "name": "Mall", "variant": 1, "src": "assets/U_Mall_1.webp"}, {"id": "U_Neighborhood_0", "family": "Urban", "name": "Neighborhood", "variant": 0, "src": "assets/U_Neighborhood_0.webp"}, {"id": "U_Neighborhood_1", "family": "Urban", "name": "Neighborhood", "variant": 1, "src": "assets/U_Neighborhood_1.webp"}, {"id": "U_Park_0", "family": "Urban", "name": "Amusement park", "variant": 0, "src": "assets/U_Park_0.webp"}, {"id": "U_Park_1", "family": "Urban", "name": "Amusement park", "variant": 1, "src": "assets/U_Park_1.webp"}, {"id": "U_ParkingLot_0", "family": "Urban", "name": "Parking lot", "variant": 0, "src": "assets/U_ParkingLot_0.webp"}, {"id": "U_ParkingLot_1", "family": "Urban", "name": "Parking lot", "variant": 1, "src": "assets/U_ParkingLot_1.webp"}, {"id": "U_Stadium_0", "family": "Urban", "name": "Stadium", "variant": 0, "src": "assets/U_Stadium_0.webp"}, {"id": "U_Stadium_1", "family": "Urban", "name": "Stadium", "variant": 1, "src": "assets/U_Stadium_1.webp"}];
+const RESULTS = {"Base": [{"model": "Qwen3-VL-4B", "group": "Open-source", "values": [[0.71, 0.81], [1.5, 1.33], [0.51, 0.6], [16.24, 1.85], [22.17, 14.32], [3.85, 2.92], [7.99, 3.93]]}, {"model": "InternVL3.5-8B", "group": "Open-source", "values": [[0.16, 0.3], [3.41, 2.36], [0.11, 0.22], [25.42, 11.63], [62.06, 16.89], [1.54, 1.74], [12.04, 4.47]]}, {"model": "Ministral 3 8B", "group": "Open-source", "values": [[0.17, 0.31], [1.28, 1.48], [0.09, 0.21], [16.23, 3.43], [51.63, 24.41], [1.64, 1.18], [11.37, 5.2]]}, {"model": "Phi-4-multimodal", "group": "Open-source", "values": [[0.13, 0.35], [0.6, 1.01], [0.09, 0.25], [23.52, 7.47], [37.96, 16.67], [1.65, 1.79], [9.22, 6.17]]}, {"model": "MiniCPM-V 4.6", "group": "Open-source", "values": [[0.19, 0.53], [1.35, 2.41], [0.15, 0.43], [20.26, 6.44], [42.47, 11.07], [1.47, 1.98], [9.91, 3.84]]}, {"model": "GPT-5.6 Sol", "group": "Closed-source", "values": [[2.81, 2.42], [3.06, 2.44], [2.2, 1.87], [17.9, 4.01], [32.91, 14.45], [8.16, 3.78], [11.22, 4.23]]}, {"model": "Grok-4.5", "group": "Closed-source", "values": [[0.25, 0.69], [0.49, 1.39], [0.25, 0.69], [15.46, 1.81], [22.18, 12.44], [2.46, 2.28], [3.69, 2.65]]}, {"model": "Gemini 3.8 Flash", "group": "Closed-source", "values": [[2.4, 2.23], [3.68, 4.32], [2.37, 2.21], [21.61, 7.07], [33.95, 12.21], [11.16, 8.27], [17.9, 8.25]]}, {"model": "Claude Opus 5", "group": "Closed-source", "values": [[3.2, 2.04], [7.84, 4.6], [2.83, 2.04], [19.69, 5.97], [58.96, 15.94], [7.38, 3.73], [18.48, 5.64]]}], "Standard": [{"model": "GPT-5.6 Sol", "group": "Closed-source", "values": [[0.26, 0.72], [0.26, 0.72], [0.2, 0.57], [37.66, 5.47], [36.57, 16.79], [2.3, 2.02], [2.3, 2.02]]}, {"model": "Claude Opus 5", "group": "Closed-source", "values": [[0.49, 0.91], [1.32, 2.33], [0.4, 0.73], [36.49, 8.89], [56.3, 21.31], [1.29, 1.91], [2.61, 3.84]]}]};
+(() => {
+  'use strict';
+  const qs = s => document.querySelector(s);
+  const qsa = s => [...document.querySelectorAll(s)];
+  const links = window.AERIALDOJO_LINKS || {};
+  qsa('[data-resource]').forEach(link => {
+    const url = links[link.dataset.resource];
+    if (url) {
+      link.href = url; link.target = '_blank'; link.rel = 'noopener';
+      link.removeAttribute('aria-disabled'); link.removeAttribute('title');
+    } else {
+      const explain = event => {event.preventDefault(); const status = qs('#resource-status'); status.hidden = false; status.textContent = link.title + '.';};
+      link.addEventListener('click', explain);
+      link.addEventListener('keydown', event => {if (event.key === 'Enter') explain(event);});
+    }
+  });
+  let family = 'All';
+  function updateScenes() {
+    const split = qs('#scene-split').value;
+    qsa('.scene').forEach(card => {card.hidden = !((family === 'All' || card.dataset.family === family) && (split === 'all' || card.dataset.split === split));});
+  }
+  qsa('button[data-family]').forEach(button => button.addEventListener('click', () => {
+    family = button.dataset.family;
+    qsa('button[data-family]').forEach(b => {b.classList.toggle('active', b === button); b.setAttribute('aria-pressed', String(b === button));});
+    updateScenes();
+  }));
+  qs('#scene-split').addEventListener('change', updateScenes);
+  const dialog = qs('#scene-dialog');
+  qsa('.scene-open').forEach(button => button.addEventListener('click', () => {
+    const scene = SCENES[Number(button.dataset.index)];
+    qs('#dialog-image').src = scene.src;
+    qs('#dialog-image').alt = `${scene.name}, ${scene.family} simulation scene`;
+    qs('#scene-dialog-title').textContent = scene.name;
+    qs('#scene-dialog-detail').textContent = `${scene.family} · ${scene.variant === 0 ? 'In-distribution (ID)' : 'Out-of-distribution (OOD)'}`;
+    dialog.showModal(); document.body.style.overflow = 'hidden';
+  }));
+  qs('.dialog-close').addEventListener('click', () => dialog.close());
+  dialog.addEventListener('close', () => {document.body.style.overflow = '';});
+  dialog.addEventListener('click', event => {if (event.target === dialog) {const r = dialog.getBoundingClientRect(); if (event.clientX < r.left || event.clientX > r.right || event.clientY < r.top || event.clientY > r.bottom) dialog.close();}});
+  let setting = 'Base', radius = 3;
+  const championBadge = '<span class="champion-mark" title="Rank 1"><svg viewBox="0 0 24 24" role="img" aria-label="Champion"><path d="M7 5H4v2a4 4 0 0 0 4 4m9-6h3v2a4 4 0 0 1-4 4" fill="none" stroke="#b58932" stroke-width="1.6" stroke-linecap="round"/><path d="M7 3h10v6a5 5 0 0 1-10 0Z" fill="#e8b74e" stroke="#b58932" stroke-width="1.2"/><path d="M12 14v5m-4 2h8m-7-2h6" fill="none" stroke="#b58932" stroke-width="2" stroke-linecap="round"/><path d="m12 5 1 2 2.2.3-1.6 1.6.4 2.1-2-1-2 1 .4-2.1-1.6-1.6L11 7Z" fill="#fff5cf"/></svg></span>';
+  function renderResults() {
+    const sr = radius === 3 ? 0 : 5;
+    const rows = [...RESULTS[setting]].sort((a,b) => b.values[sr][0] - a.values[sr][0]);
+    const indices = radius === 3 ? [0,1,2,3,4] : [5,6];
+    const names = ['SR (%) ↑','OSR (%) ↑','SPL (%) ↑','DTS (m) ↓','CR (%) ↓','SR (%) ↑','OSR (%) ↑'];
+    const best = indices.map(i => (i === 3 || i === 4 ? Math.min : Math.max)(...rows.map(r => r.values[i][0])));
+    qs('#results-table thead').innerHTML = '<tr><th scope="col">Rank</th><th scope="col">Model</th>'+indices.map(i => `<th scope="col"${i === sr ? ' aria-sort="descending"' : ''}>${names[i]}</th>`).join('')+'</tr>';
+    qs('#results-table tbody').innerHTML = rows.map((row,rank) => `<tr><td class="rank"><span>${rank+1}</span></td><th scope="row"><span class="model-name">${row.model}${rank === 0 ? championBadge : ''}</span></th>`+indices.map((i,j) => `<td class="${row.values[i][0] === best[j] ? 'best' : ''}">${row.values[i][0].toFixed(2)}</td>`).join('')+'</tr>').join('');
+    qs('#results-title').textContent = `${setting} tasks · ${radius} m success radius`;
+  }
+  ['setting','radius'].forEach(key => qsa(`button[data-${key}]`).forEach(button => button.addEventListener('click', () => {
+    if (key === 'setting') setting = button.dataset.setting; else radius = Number(button.dataset.radius);
+    qsa(`button[data-${key}]`).forEach(b => {b.classList.toggle('active', b === button); b.setAttribute('aria-pressed', String(b === button));});
+    renderResults();
+  })));
+  renderResults();
+  qs('#copy-citation').addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(qs('#bibtex').textContent);
+      qs('#copy-status').textContent = 'BibTeX copied.';
+    } catch {
+      const range = document.createRange(); range.selectNodeContents(qs('#bibtex'));
+      const selection = window.getSelection(); selection.removeAllRanges(); selection.addRange(range);
+      qs('#copy-status').textContent = 'Citation selected. Press Ctrl+C or use Download .bib.';
+    }
+  });
+})();
+</script><script>// Anonymous proxies may have neither byte ranges nor CORS. The trusted loader
+// loads only repository-local, content-hashed classic-script data fragments.
+// Fragment data hashes are checked before appending to the native media buffer.
+(() => {
+  'use strict';
+  const manifest = {"codec":"avc1.640028","duration":60,"segmentDuration":2,"init":{"src":"assets/demo-seek-69814c755e90/segment-00-98a62d6dcbb1.js","sha256":"af7109c72b5170eb583a4502ee0b2136fdaedf511d2d5de91d0dc8ea6c4be5a3","bytes":843},"segments":[{"src":"assets/demo-seek-69814c755e90/segment-01-25c7d484bb8a.js","sha256":"f3730d5c7e33b1250813a9ae0358ef5c41666685113b8461c542acdb9ee5c89d","bytes":3343996},{"src":"assets/demo-seek-69814c755e90/segment-02-bd1047a65389.js","sha256":"ef24bbaf3985867e8b4dfab0a80991136530229f8dc0ea9fcc1a7d525f632db3","bytes":3279062},{"src":"assets/demo-seek-69814c755e90/segment-03-e3d003a5d750.js","sha256":"28e06502ab072f415a7826d5ad2f619a35e7502253145ecaf925d3a8dfbc5a3c","bytes":3312137},{"src":"assets/demo-seek-69814c755e90/segment-04-c37ec1be20a1.js","sha256":"948aaa648fc29b23645033dbbde64697769c2ef447f26561994da1969ea94ef7","bytes":3178034},{"src":"assets/demo-seek-69814c755e90/segment-05-1be1ccacaad0.js","sha256":"627317a970155fa0ed500e3b6a9c49e6a16181b336cc2aa36343a0b31f1ac09a","bytes":3148350},{"src":"assets/demo-seek-69814c755e90/segment-06-a730512a6222.js","sha256":"244694a784a861839bc6085f9eb81f4ca2910cfaab0829c29b6e3ffeef983ce4","bytes":3207856},{"src":"assets/demo-seek-69814c755e90/segment-07-efb8e459df91.js","sha256":"737c645abaa6e1578eece81d5dbb15bf08556b93bd5d32918d1860d7a70c66e7","bytes":3089359},{"src":"assets/demo-seek-69814c755e90/segment-08-38135a7b3b73.js","sha256":"d1888864ef065fabfcc31a704a89ffcb239ec756f2a2317bce6566582d6396a8","bytes":3037691},{"src":"assets/demo-seek-69814c755e90/segment-09-2ab2bc1f085f.js","sha256":"4a108eb571c6a6aac1030e58c30f4bc8f671d3c326b6274abac956b7233b96a2","bytes":2928571},{"src":"assets/demo-seek-69814c755e90/segment-10-6edd16cf5caf.js","sha256":"140790bfa7604731d5f1d8c3ca94260c601449933628e342deaf1b94d32b9201","bytes":2964584},{"src":"assets/demo-seek-69814c755e90/segment-11-ef8be847a660.js","sha256":"c99afb5da5417ac7e4e9118ebdb22fc7009190e0f1946527c19143da923ccde5","bytes":3072527},{"src":"assets/demo-seek-69814c755e90/segment-12-f54f5a45b658.js","sha256":"8762a707c2de40df52f05c95890866fa6718a5e038bcfe8e7cf8f0cc533c5037","bytes":2993551},{"src":"assets/demo-seek-69814c755e90/segment-13-f8e4c4f38843.js","sha256":"86c5c3abcfff8586d65832bb95b3f457dad6a8ec692adab5511e15f6f6e7fb68","bytes":3040793},{"src":"assets/demo-seek-69814c755e90/segment-14-e3b005f71b83.js","sha256":"6abef7032cc86726b5b68f1b6744a7fbede8d3b6bc312b4aa82623cc4b6c6401","bytes":2974552},{"src":"assets/demo-seek-69814c755e90/segment-15-665c185bcfa1.js","sha256":"559076e7b8027834f0c9492a6e99631292f995ee25a8d664cf4a7ccb3b59be58","bytes":2990741},{"src":"assets/demo-seek-69814c755e90/segment-16-ceaa099ed689.js","sha256":"025ef7c8c9438268f4b4f372911a43beb49ad9228e20ae5754bd0076c562aba4","bytes":2998216},{"src":"assets/demo-seek-69814c755e90/segment-17-76fe276fce13.js","sha256":"d2527b7b417ee9ef64e4fd9c9d7e7c6148f23c6ae93d39b79f4dcd5c404e1436","bytes":2950794},{"src":"assets/demo-seek-69814c755e90/segment-18-18ebfa10d309.js","sha256":"fae44fc08d5c5a8be2ca434be021405611e8fe23c9416b0d4e4d6d4d993ba69e","bytes":3008603},{"src":"assets/demo-seek-69814c755e90/segment-19-11aba2c8b2e4.js","sha256":"26bc1eb1784e84ddb4c3a3a9b743a11e98d7caf69d3b3fb80bec2cc8abab34c8","bytes":3047639},{"src":"assets/demo-seek-69814c755e90/segment-20-5a64803e7644.js","sha256":"b1891395863db42fb69d9a7535607eff3c50f4edbed8d0cab7542b5819ae8eb2","bytes":2989565},{"src":"assets/demo-seek-69814c755e90/segment-21-5b11567e2652.js","sha256":"553f552fd5ae5a82de1d514fad661905d4051d3ec8c76b914340f7a0655a3dd9","bytes":3007671},{"src":"assets/demo-seek-69814c755e90/segment-22-86b128cdf755.js","sha256":"069750c5895e1f99e8c24710eed96f754aff1d446bcfcb6a47e48d030bfa677f","bytes":3000242},{"src":"assets/demo-seek-69814c755e90/segment-23-e2aa18752ef4.js","sha256":"4a575d550a06b3da91e80fef5ebb8f1486ee1d41914989b38439ea77c9ec258b","bytes":2985707},{"src":"assets/demo-seek-69814c755e90/segment-24-f4f160c74a35.js","sha256":"bae7f0225606cfe83fcea870bb9ece0bf1b121b3827f3e86d93cb9ff2fca8881","bytes":2983220},{"src":"assets/demo-seek-69814c755e90/segment-25-56e38c7a4faa.js","sha256":"e132dac3605f2bf5c09bfc8ce147e99de213f07a9d817ec082af8348943f17a0","bytes":3005093},{"src":"assets/demo-seek-69814c755e90/segment-26-74beb12fddaa.js","sha256":"b01df5bbe74b0735dcff9d6c5feeafa21fd54fa68f0d066e628cb878575f6e7a","bytes":2987564},{"src":"assets/demo-seek-69814c755e90/segment-27-218dbcd7b342.js","sha256":"947a2885e0824461e526e584c1a50e94a50f70840e6bac3c875409e101ede87a","bytes":3010459},{"src":"assets/demo-seek-69814c755e90/segment-28-85cd14388279.js","sha256":"4fb84ffc6a3f82e11f5e0bbea99daad011497ee568a3c064a4f19cc93279f03c","bytes":2941851},{"src":"assets/demo-seek-69814c755e90/segment-29-0bff3e9ef0cf.js","sha256":"3cce26ab2f2979e59cdc1a4e0ce89ed0d7221f7d56000166c5c18379a584d2cd","bytes":2946089},{"src":"assets/demo-seek-69814c755e90/segment-30-b928e63b0eaa.js","sha256":"e01d14477ca8ef13cf122070e6ec4d002aa42d1ebad818ceff31fdcd03d93c12","bytes":2985705}]};
+  const video = document.querySelector('#demo video');
+  if (!video) return;
+  const original = video.querySelector('source').getAttribute('src');
+  const pending = new Map(), cache = new Map(), appended = new Set();
+  const status = document.createElement('p');
+  status.hidden = true; status.setAttribute('role', 'status');
+  status.className = 'demo-playback-status'; video.after(status);
+  let serial = Promise.resolve(), buffer, media, generation = 0, disposed = false;
+  const once = (node, event) => new Promise((resolve, reject) => {
+    const done = () => { node.removeEventListener('error', error); resolve(); };
+    const error = () => { node.removeEventListener(event, done); reject(new Error('Media buffer error')); };
+    node.addEventListener(event, done, {once:true}); node.addEventListener('error', error, {once:true});
+  });
+  const entries = [manifest.init, ...manifest.segments];
+  window.AerialDojoDemo = { receive: async (id, encoded) => {
+    const request = pending.get(id);
+    if (!request) return;
+    try {
+      const raw = atob(encoded), bytes = new Uint8Array(raw.length);
+      for (let i = 0; i < raw.length; i++) bytes[i] = raw.charCodeAt(i);
+      if (crypto.subtle) {
+        const hash = Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',bytes)), b => b.toString(16).padStart(2,'0')).join('');
+        if (hash !== entries[id].sha256) throw new Error('Video fragment integrity mismatch');
+      }
+      cache.set(id,bytes);
+      while(cache.size > 6) cache.delete(cache.keys().next().value);
+      request.resolve(bytes);
+    } catch(error) { request.reject(error); }
+  }};
+  function load(id) {
+    if (cache.has(id)) return Promise.resolve(cache.get(id));
+    if (pending.has(id)) return pending.get(id).promise;
+    const item = entries[id];
+    if (!item || !/^assets\/demo-seek-[a-f0-9]+\/[a-z0-9-]+\.js$/.test(item.src)) return Promise.reject(new Error('Invalid media path'));
+    const script = document.createElement('script');
+    script.async = true; script.referrerPolicy = 'no-referrer';
+    script.src = new URL(item.src, document.baseURI).href;
+    let timer;
+    const request = {};
+    const clean = () => { clearTimeout(timer); script.remove(); pending.delete(id); };
+    request.promise = new Promise((resolve,reject) => {
+      request.resolve = data => { clean(); resolve(data); };
+      request.reject = error => { clean(); reject(error); };
+    });
+    pending.set(id,request);
+    script.onerror = () => request.reject(new Error('Video segment could not be loaded'));
+    timer = setTimeout(() => request.reject(new Error('Video segment timed out')),60000);
+    document.head.append(script);
+    return request.promise;
+  }
+  function queue(work) {
+    const result = serial.then(work);
+    serial = result.catch(() => {});
+    return result;
+  }
+  function indexAt(time) { return Math.min(manifest.segments.length-1,Math.max(0,Math.floor(time / manifest.segmentDuration))); }
+  async function append(index, token) {
+    if (appended.has(index)) return;
+    const bytes = await load(index+1);
+    await queue(async () => {
+      if (disposed || appended.has(index)) return;
+      if (token !== generation && Math.abs(index-indexAt(video.currentTime))>1) return;
+      if (buffer.updating) await once(buffer,'updateend');
+      try {
+        const ready = once(buffer,'updateend'); buffer.appendBuffer(bytes); await ready;
+      } catch(error) {
+        if (error.name !== 'QuotaExceededError') throw error;
+        // Keep a short neighborhood in constrained mobile media buffers.
+        const keepStart=Math.max(0,video.currentTime-8),keepEnd=Math.min(manifest.duration,video.currentTime+10);
+        for(const [start,end] of [[0,keepStart],[keepEnd,manifest.duration]]) {
+          if(end>start){const ready=once(buffer,'updateend');buffer.remove(start,end);await ready;}
+        }
+        for(const previous of appended) if(previous*manifest.segmentDuration<keepStart || (previous+1)*manifest.segmentDuration>keepEnd) appended.delete(previous);
+        const ready=once(buffer,'updateend');buffer.appendBuffer(bytes);await ready;
+      }
+      appended.add(index);
+      status.hidden = true;
+      if (index === manifest.segments.length-1 && media.readyState === 'open') media.endOfStream();
+    });
+  }
+  let requested = -1;
+  function finish() {
+    // Appending an earlier segment after a seek reopens an ended MediaSource.
+    // Signal EOS again when playback reaches the already-buffered final segment.
+    if (appended.has(manifest.segments.length-1) && video.currentTime >= manifest.duration-manifest.segmentDuration && media.readyState==='open' && !buffer.updating) media.endOfStream();
+  }
+  async function schedule(force=false) {
+    if(!buffer || disposed) return;
+    finish();
+    const index=indexAt(video.currentTime);
+    if(!force && requested===index) return;
+    requested=index; const token=++generation;
+    try {
+      await append(index,token);
+      if(token===generation && index+1<manifest.segments.length) await append(index+1,token);
+      if(token===generation && !video.paused && index+2<manifest.segments.length) await append(index+2,token);
+    } catch(error) {
+      if(token!==generation || disposed) return;
+      requested=-1;status.textContent='Unable to load this position. Please try playing or seeking again.';status.hidden=false;
+      console.warn(error.message);
+    }
+  }
+  async function start() {
+    const MediaSourceClass=window.MediaSource || window.ManagedMediaSource;
+    const type=`video/mp4; codecs="${manifest.codec}"`;
+    if(!MediaSourceClass || !MediaSourceClass.isTypeSupported(type)) {
+      // Original MP4 remains usable in browsers without Media Source Extensions.
+      video.dataset.playbackMode='native'; video.preload='auto';video.load();return;
+    }
+    video.querySelectorAll('source').forEach(s=>s.remove());
+    media=new MediaSourceClass();
+    if(window.ManagedMediaSource && MediaSourceClass===window.ManagedMediaSource) video.disableRemotePlayback=true;
+    const opened=once(media,'sourceopen');
+    const objectURL=URL.createObjectURL(media);video.src=objectURL;
+    video.dataset.playbackMode='segmented';
+    await opened;
+    buffer=media.addSourceBuffer(type);
+    const init=await load(0),ready=once(buffer,'updateend');buffer.appendBuffer(init);await ready;
+    media.duration=manifest.duration;
+    video.addEventListener('seeking',()=>schedule(true));
+    video.addEventListener('play',()=>schedule(true));
+    video.addEventListener('timeupdate',()=>schedule());
+    await schedule(true);
+    window.addEventListener('pagehide',()=>{disposed=true;URL.revokeObjectURL(objectURL);},{once:true});
+  }
+  start().catch(error=>{
+    console.warn('Demo player fallback:',error.message);
+    video.dataset.playbackMode='native';video.src=original;video.preload='auto';video.load();
+  });
+})();
+</script></body></html>
