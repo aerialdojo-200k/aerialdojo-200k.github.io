@@ -2,7 +2,7 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AerialDojo-200K | Open-World Aerial Object-Goal Search</title>
 <meta name="description" content="AerialDojo-200K: A Large-Scale Benchmark Suite for Open-World Aerial Object-Goal Search.">
-<meta name="robots" content="noindex, nofollow, noarchive"><meta name="referrer" content="no-referrer"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self' data:; font-src 'self' data:; media-src 'self' blob:; connect-src 'none'; script-src 'sha256-31NR81DU8V2LUZoQDAnKCPIsNb4W82p8iRpF+9bgR2A=' 'sha256-Jc00DZnjah6ESwYAGFnbubAYRgIjxTpLHSocblO2L7M=' 'sha256-H6JfQs4Pay2x0qOS/4tlBLvkAuqPFRxlujOoI5WHxW4=' 'strict-dynamic'; object-src 'none'; base-uri 'none'; form-action 'none'"><meta name="theme-color" content="#0a1931"><link rel="stylesheet" href="fonts-proxy-dd92962e27ed.css"><link rel="stylesheet" href="styles-9fd1b35fe714.css">
+<meta name="robots" content="noindex, nofollow, noarchive"><meta name="referrer" content="no-referrer"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self' data:; font-src 'self' data:; media-src 'self' blob:; connect-src 'none'; script-src 'sha256-31NR81DU8V2LUZoQDAnKCPIsNb4W82p8iRpF+9bgR2A=' 'sha256-Jc00DZnjah6ESwYAGFnbubAYRgIjxTpLHSocblO2L7M=' 'sha256-hP/qKHyaNkAtIOs0CZol00ccrgtPjyYozM6JkVTCL4I=' 'strict-dynamic'; object-src 'none'; base-uri 'none'; form-action 'none'"><meta name="theme-color" content="#0a1931"><link rel="stylesheet" href="fonts-proxy-dd92962e27ed.css"><link rel="stylesheet" href="styles-9fd1b35fe714.css">
 <link rel="stylesheet" href="demo-0f2e4d5c08e6.css"></head><body>
 <a class="skip-link" href="#demo">Skip to content</a>
 <header class="hero" id="top"><nav class="section-nav" aria-label="Sections"><div class="nav-links"><a href="#demo"><i class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m10 9 5 3-5 3Z"/></svg></i><span>DEMO</span></a><a href="#overview"><i class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></i><span>OVERVIEW</span></a><a href="#sop"><i class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h12v17H4V4h4m0-2h8v5H8zM8 12h8M8 16h5"/></svg></i><span>SOP</span></a><a href="#data-statistics"><i class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 4 16 4 16 0V5M4 12c0 4 16 4 16 0"/></svg></i><span>DATASET</span></a><a href="#benchmark"><i class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 6-6 6 6 6m8-12 6 6-6 6M14 3l-4 18"/></svg></i><span>BENCHMARK</span></a><a href="#leaderboard"><i class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V4m0 16h17M8 15v-4m5 4V7m5 8V2"/></svg></i><span>LEADERBOARD</span></a></div></nav>
@@ -115,6 +115,11 @@ const RESULTS = {"Base": [{"model": "Qwen3-VL-4B", "group": "Open-source", "valu
   const video = document.querySelector('#demo video');
   if (!video) return;
   const original = video.querySelector('source').getAttribute('src');
+  // Keep efficient native HTTP Range streaming on the ordinary website.
+  // Only the anonymous service's opaque-origin sandbox needs the compatibility transport.
+  if (window.origin !== 'null') {
+    video.dataset.playbackMode='native';video.preload='metadata';video.load();return;
+  }
   const pending = new Map(), cache = new Map(), appended = new Set();
   const status = document.createElement('p');
   status.hidden = true; status.setAttribute('role', 'status');
@@ -158,7 +163,7 @@ const RESULTS = {"Base": [{"model": "Qwen3-VL-4B", "group": "Open-source", "valu
     });
     pending.set(id,request);
     script.onerror = () => request.reject(new Error('Video segment could not be loaded'));
-    timer = setTimeout(() => request.reject(new Error('Video segment timed out')),60000);
+    timer = setTimeout(() => request.reject(new Error('Video segment timed out')),120000);
     document.head.append(script);
     return request.promise;
   }
